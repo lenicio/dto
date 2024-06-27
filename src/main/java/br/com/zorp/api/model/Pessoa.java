@@ -1,5 +1,6 @@
 package br.com.zorp.api.model;
 
+import br.com.zorp.api.genero.Genero;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,6 +11,7 @@ import lombok.Setter;
 public class Pessoa {
   private String nome;
   private int idade;
+  private Genero genero;
 
 
   public String exibirDetalhes() {
@@ -18,6 +20,7 @@ public class Pessoa {
     ret += "-------------------------------";
     ret += "\nNome: " + getNome();
     ret += "\nIdade: " + getIdade();
+    ret += "\nGenero: " + getGenero();
 
     if (getIdade() >= 18) {
       ret += "\nÉ maior de idade!";
